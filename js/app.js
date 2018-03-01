@@ -50,9 +50,25 @@ function zoom(){
 
 Next, create a function named valueMenu that will display your favorite items in the paragraph the the id of `menu` after clicking on the showMenu paragraph.*/
 
+var menuDisplay = false;
+
+var menuItems = ['Apple Pie', 'Breakfast Burrito', 'Filet -O-Fish'];
+
+function valueMenu(){
+	if(menuDisplay === false){
+		for(var i = 0; i < menuItems.length; i++){
+			var node = document.createElement('li');
+			var textnode = document.createTextNode(menuItems[i]);
+			node.appendChild(textnode);
+			document.getElementById('menu').appendChild(node);
+		}
+		menuDisplay = true;
+	}
+}
 
 //5. Gin.
 /*Create a function named redFace that will change the paragraph text to red and a font size of 30px after clicking on the text.*/
+
 
 
 //6. Peanut Butter Cup Oreos
