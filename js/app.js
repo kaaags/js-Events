@@ -86,14 +86,36 @@ function showPrice(){
 
 var myQuote = "Our lives are defined by opportunities; even the ones we miss.";
 
+function activateQuote(){
+	document.getElementById('displayQuote').innerHTML = myQuote;
+}
+
+document.getElementById('Benjamin').addEventListener('click', activateQuote);
 
 //8. Say It again, Randomly
 /*Create a function that will generate a random quote from the variable below after clicking on the button.*/
 
 var quotes = ["It's a funny thing about comin' home. Looks the same, smells the same, feels the same. You'll realize what's changed is you.", "Momma? Momma? Some days, I feel different than the day before.", "Some people, were born to sit by a river. Some get struck by lightning. Some have an ear for music. Some are artists. Some swim. Some know buttons. Some know Shakespeare. Some are mothers. And some people, dance.", "For what it's worth, it's never too late to be whoever you want to be."];
 
+document.getElementById('displayQuote').className = 'displayQuote';
 
+function activateRndmQuote(){
+	var temp = quotes[Math.floor(Math.random()*quotes.length)];
+	document.getElementById('displayQuotes').innerHTML = temp;
+}
+
+document.getElementById('random').addEventListener('click', activateRndmQuote);
 
 //9. Unlock the Secret to Financial Freedom
 /*Create an event listener that will show and hide the message when clicking on the button.
 */
+
+function toggleSecret(){
+	if(document.getElementById('showmoney').getAttribute('alt') === true){
+		document.getElementById('showmoney').removeAttribute('alt');
+	}else{
+		document.getElementById('showmoney').setAttribute('alt');
+	}
+}
+
+document.getElementById('showHide').addEventListener('click', toggleSecret);
