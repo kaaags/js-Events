@@ -112,7 +112,6 @@ document.getElementById('random').addEventListener('click', activateRndmQuote);
 
 function toggleSecret(){
 	if(document.getElementById('showmoney').style.display === 'none'){
-		// document.getElementById('catmoney').setAttribute('alt', document.getElementById('catmoney').getAttribute('src'));
 		document.getElementById('showmoney').style.display = 'block';
 	}else{
 		document.getElementById('showmoney').style.display = 'none';
